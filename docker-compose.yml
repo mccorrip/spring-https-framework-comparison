@@ -1,0 +1,30 @@
+services:
+  postgres-testdata:
+    image: postgres-testdata:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: test_db
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U user" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  test-service:
+    image: testservice:latest
+    ports:
+      - "7070:7070"
+
+  tomcat:
+    image: tomcat-21-resttemplate:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres-testdata:
+        condition: service_healthy
+    environment:
+      DB_IP: "jdbc:postgresql://postgres-testdata:5432/test_db"
+      REMOTE_SERVER: "http://test-service:7070"
