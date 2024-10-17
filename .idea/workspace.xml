@@ -53,7 +53,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.digma.intellij.plugin.settings.ProjectSettings",
+    "settings.editor.selected.configurable": "profiler.jvm",
     "spring.configuration.checksum": "c45a6a993bed5c04b8de3f76a2f314b8",
     "vue.rearranger.settings.migration": "true"
   }
