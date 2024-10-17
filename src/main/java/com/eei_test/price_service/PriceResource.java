@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -41,7 +40,7 @@ public class PriceResource {
     }
 
     @GetMapping("/price")
-    public PriceResponseEntity priceImpl(@RequestParam String jwt) {
+    public PriceResponseEntity priceImpl(@RequestParam("jwt") String jwt) {
         logger.info("/api/price called");
 
         // get key from remote service
