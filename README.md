@@ -12,7 +12,7 @@ Each implementation as it's own branch. The branches are as follows:
 
 <h3>Docker Build</h3>
 
-```docker build -t tomcat-21-resttemplate:latest .```
+```docker build -t tomcat-21-restclient:latest .```
 
 <h3>Docker Run</h3>
 Each branch includes a docker compose file that launches all required dependencies:

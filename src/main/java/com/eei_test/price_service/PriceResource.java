@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -33,10 +34,10 @@ public class PriceResource {
     @Autowired
     private MyItemRepository itemRepo;
 
-    private RestTemplate restTemplate;
+    private RestClient restClient;
 
     public PriceResource(){
-        restTemplate = new RestTemplate();
+        restClient = RestClient.create();
     }
 
     @GetMapping("/price")
@@ -44,7 +45,10 @@ public class PriceResource {
         logger.info("/api/price called");
 
         // get key from remote service
-        RemoteRestPKeyEntity result = restTemplate.getForObject(remoteEndPoint1 + "/pkey", RemoteRestPKeyEntity.class);
+        RemoteRestPKeyEntity result = restClient.get()
+                .uri(remoteEndPoint1 + "/pkey")
+                .retrieve()
+                .body(RemoteRestPKeyEntity.class);
 
         // vlidate JWT
         String pkey = result.pkey;
@@ -83,7 +87,10 @@ public class PriceResource {
 
         // remote request for discount -- standard pooled, sync req .. could be made as async in future
 
-        RemoteRestDiscEntity result2 = restTemplate.getForObject(remoteEndPoint2 + "/discount?quantity=" + reqEntity.quantity, RemoteRestDiscEntity.class);
+        RemoteRestDiscEntity result2 = restClient.get()
+                .uri(remoteEndPoint2 + "/discount?quantity=" + reqEntity.quantity)
+                .retrieve()
+                .body(RemoteRestDiscEntity.class);
 
         float myDisk = result2.discount;
         // DB query for price, fetching all data row
@@ -109,14 +116,25 @@ public class PriceResource {
         logger.info("Hello W called");
         return "Hello world from Service RNZ!";
     }
+
     @GetMapping("/remote-pkey")
     public String remoteKPey() {
-        return restTemplate.getForObject(remoteEndPoint1 + "/pkey", String.class);
+        RestClient restClient = RestClient.create();
+        String result = restClient.get()
+                .uri(remoteEndPoint1 + "/pkey")
+                .retrieve()
+                .body(String.class);
+        return result;
     }
 
     @GetMapping("/remote-discount")
     public String remoteDiscount() {
-        return restTemplate.getForObject(remoteEndPoint2 + "/discount?quantity=66", String.class);
+        RestClient restClient = RestClient.create();
+        String result = restClient.get()
+                .uri(remoteEndPoint2 + "/discount?quantity=66")
+                .retrieve()
+                .body(String.class);
+        return result;
     }
 
     private String calculateHMAC(String data, String key) 

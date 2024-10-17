@@ -19,7 +19,7 @@ services:
       - "7070:7070"
 
   tomcat:
-    image: tomcat-21-resttemplate:latest
+    image: tomcat-21-restclient:latest
     ports:
       - "8080:8080"
     depends_on:
