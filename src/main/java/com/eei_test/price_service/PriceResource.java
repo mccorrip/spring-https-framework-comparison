@@ -40,7 +40,7 @@ public class PriceResource {
     }
 
     @GetMapping("/price")
-    public PriceResponseEntity priceImpl(@RequestParam String jwt) {
+    public PriceResponseEntity priceImpl(@RequestParam("jwt") String jwt) {
         logger.info("/api/price called");
 
         // get key from remote service
