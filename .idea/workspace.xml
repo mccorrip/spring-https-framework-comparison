@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9285b4ab-63df-46a0-a38a-9875f770c767" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/MyItemEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/MyItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/PriceRequestEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/PriceResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/PriceResponseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/PriceServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/RemoteRestDiscEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/eei_test/price_service/RemoteRestPKeyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k6_tps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price-service.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +17,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,28 +35,46 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/petermccorrie/Documents/GitHub/spring-https-framework-comparison/WebClient",
+    "last_opened_file_path": "/Users/petermccorrie/Documents/GitHub/spring-https-framework-comparison/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.digma.intellij.plugin.settings.ProjectSettings",
+    "spring.configuration.checksum": "c45a6a993bed5c04b8de3f76a2f314b8",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/WebClient" />
       <recent name="$PROJECT_DIR$/RestClient" />
       <recent name="$PROJECT_DIR$/RestTemplate" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PriceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="price-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eei_test.price_service.PriceServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,6 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1729086876863</updated>
       <workItem from="1729086878046" duration="2303000" />
+      <workItem from="1729108298352" duration="199000" />
+      <workItem from="1729108506098" duration="2337000" />
+      <workItem from="1729110989361" duration="4134000" />
     </task>
     <servers />
   </component>
