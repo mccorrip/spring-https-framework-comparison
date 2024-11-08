@@ -1,7 +1,8 @@
 <h1>Framework Comparison</h1>
 
 This project implements a typical REST API, utilising different HTTP classes in SpringBoot.
-Each implementation as it's own branch. The branches are as follows:
+Each implementation as it's own branch. 
+The branches are as follows:
 1. RestTemplate
 2. RestClient
 3. WebClient
